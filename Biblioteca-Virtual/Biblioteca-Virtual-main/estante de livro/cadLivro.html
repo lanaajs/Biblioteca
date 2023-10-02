@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/cadLivro.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <title>Minha Biblioteca</title>
+</head>
+
+<body>
+    <header>
+        <a href="pagPrincipal.html"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+        <b>
+            <p>Adicione seu Livro</p>
+        </b>
+    </header>
+
+    <main>
+        <form action="">
+            <label for="">Título: </label><br>
+            <input type="text" id="title" placeholder="Digite o Título do Livro"><br><br>
+
+            <label for="">Autor: </label><br>
+            <input type="text" id="autor" placeholder="Digite o nome do autor"><br><br>
+
+            <label for="">Inicio: </label><br>
+            <input type="date" name="" id="dti"><br><br>
+
+            <label for="">Fim: </label><br>
+            <input type="date" name="" id="dtf"><br><br>
+
+            <label for="">Resumo: </label><br>
+            <textarea name="" id="" cols="40" rows="10" style="resize: none"></textarea><br><br>
+
+            <label for="">Nota: </label>
+            <ul class="avaliacao" id="nota">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+            </ul><br>
+
+            <input type="button" value="Salvar" id="btn" onclick="salvar()">
+        </form>
+    </main>
+</body>
+
+</html>
+
+<script>
+    var stars = document.querySelectorAll('.star-icon');
+
+    document.addEventListener('click', function (e) {
+        var classStar = e.target.classList;
+        if (!classStar.contains('ativo')) {
+            stars.forEach(function (star) {
+                star.classList.remove('ativo');
+            });
+            classStar.add('ativo');
+            console.log(e.target.getAttribute('data-avaliacao'));
+        }
+    });
+</script>

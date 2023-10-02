@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: 'Mooli', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(90deg, rgb(253, 176, 124), rgb(243, 211, 122));
+    color: white;
+}
+
+@media screen and (max-width: 450px) {
+
+    header span{
+        margin-top: 8%;
+        margin-left: 4%;
+        color: white;
+    }
+
+    p {
+        margin-top: 8%;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    label{
+        font-weight: bold;
+    }
+
+    form {
+        margin-top: 7%;
+        text-align: center;
+        align-items: center;
+    }
+
+    input{
+        text-align: center;
+        border: none;
+        border-radius: 12px;
+        width: 60%;
+        height: 25px;
+    }
+
+    #dti, #dtf{
+        width: 35%;
+        height: 25px;
+    }
+
+    textarea{
+        border: none;
+        border-radius: 12px;
+        padding: 2%;
+    }
+
+    .avaliacao {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .star-icon {
+        list-style-type: none;
+        cursor: pointer;
+        color: #ff3c00;
+        font-size: 30px;
+        /* alterar o tamanho das estrelas */
+    }
+
+    .star-icon::before {
+        content: "\2605";
+    }
+
+    .star-icon.ativo~.star-icon::before {
+        content: "\2606";
+    }
+
+    .avaliacao:hover .star-icon::before {
+        content: "\2605";
+    }
+
+    .star-icon:hover~.star-icon::before {
+        content: "\2606";
+    }
+
+    #btn{
+        border: none;
+        border-radius: 12px;
+        width: 30%;
+        height: 28px;
+        margin-top: 4%;
+        background-color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+
+    #btn:active{
+        color: white;
+        transition: 0.3s;
+        background: linear-gradient(90deg, rgb(235, 101, 101),rgb(231, 150, 74));
+    }
+}

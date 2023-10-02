@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="Alana de Jesus" />
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+
+    <title>Minha Biblioteca</title>
+  </head>
+  <body>
+    <header id="cabecalho">
+      <img src="img/logo.png" alt="logo"/>
+    </header>
+
+    <form action="">
+      <label for="email">E-mail</label><br />
+      <input type="email" name="email" id="email" required /><br /><br />
+
+      <label for="senha">Senha</label><br />
+      <input type="password" name="senha" id="senha" required /><br /><br />
+
+      <input type="button" value="Login" id="btn" onclick="validarLogin()"/>
+    </form>
+
+    <div id="cadastro">
+      <a href="cadastro.html"><p>Cadastre-se</p></a>
+    </div>
+  </body>
+</html>
+
+<script>
+  function validarLogin() {
+    const senha = document.getElementById("senha");
+    const email = document.getElementById("email");
+
+    if (!email.value == "" && !senha.value == "") {
+      alert("Login realizado com sucesso!");
+      window.location = 'carregamento.html'
+    } else if (email.value == "" && senha.value == "") {
+      alert("Preencha corretamente");
+    }
+  }
+</script>
